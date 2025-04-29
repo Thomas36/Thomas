@@ -124,7 +124,7 @@ export async function POST(request: Request,{ params }: { params: any }): Promis
  *         description: Internal server error
  */
 
-export async function PUT(request: Request,{ params }: { params: { idTheater: string } }): Promise<NextResponse> {
+export async function PUT(request: Request,{ params }: { params: any }): Promise<NextResponse> {
   try {
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
@@ -201,7 +201,6 @@ export async function DELETE(request: Request,{ params }: { params: any }): Prom
     }
     
     return NextResponse.json({ status: 200, message: 'Theater deleted successfully',data: { deletedCount: result.deletedCount }});
-  } catch (error: any) {
-    return NextResponse.json({ status: 500, message: 'Internal Server Error', error: error.message });
+  } catch (error: any) { return NextResponse.json({ status: 500, message: 'Internal Server Error', error: error.message });
   }
 }
