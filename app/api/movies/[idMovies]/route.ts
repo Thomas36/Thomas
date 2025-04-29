@@ -29,7 +29,7 @@ import { useParams } from 'next/navigation';
  *         description: Internal server error
  */
 
-export async function GET(request: Request, { params }: { params: { idMovie: string } }): Promise<NextResponse> {
+export async function GET(request: Request, { params }: { params: any }): Promise<NextResponse> {
   try {
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
@@ -75,7 +75,7 @@ export async function GET(request: Request, { params }: { params: { idMovie: str
  *         description: Internal server error
  */
 
-export async function POST(request: Request, { params }: { params: { idMovie: string } }): Promise<NextResponse> {
+export async function POST(request: Request, { params }: { params: any }): Promise<NextResponse> {
   try {
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
@@ -121,7 +121,7 @@ export async function POST(request: Request, { params }: { params: { idMovie: st
  *         description: Internal server error
  */
 
-export async function PUT(request: Request, { params }: { params: { idMovie: string } }): Promise<NextResponse> {
+export async function PUT(request: Request, { params }: { params: any }): Promise<NextResponse> {
   try {
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
@@ -167,7 +167,7 @@ export async function PUT(request: Request, { params }: { params: { idMovie: str
  *         description: Internal server error
  */
 
-export async function DELETE(request: Request, { params }: { params: { idMovie: string } }): Promise<NextResponse> {
+export async function DELETE(request: Request, { params }: { params: any }): Promise<NextResponse> {
   try {
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
