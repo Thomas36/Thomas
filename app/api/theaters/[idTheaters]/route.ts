@@ -129,13 +129,13 @@ export async function PUT(request: Request,{ params }: { params: any }): Promise
     const client: MongoClient = await clientPromise;
     const db: Db = client.db('sample_mflix');
     
-    const { idTheater } = params;
+    const { idTheaters } = params;
     
-    if (!ObjectId.isValid(idTheater)) {
+    if (!ObjectId.isValid(idTheaters)) {
       return NextResponse.json({ status: 400, message: 'Invalid theater ID', error: 'ID format is incorrect' });
     }
     
-    const theaterExists = await db.collection('theaters').findOne({ _id: new ObjectId(idTheater) });
+    const theaterExists = await db.collection('theaters').findOne({ _id: new ObjectId(idTheaters) });
     
     if (!theaterExists) {
       return NextResponse.json({ status: 404, message: 'Theater not found', error: 'No theater found with the given ID' });
@@ -149,7 +149,7 @@ export async function PUT(request: Request,{ params }: { params: any }): Promise
     };
     
     const result = await db.collection('theaters').updateOne(
-      { _id: new ObjectId(idTheater) },
+      { _id: new ObjectId(idTheaters) },
       { $set: updatedTheater }
     );
     
