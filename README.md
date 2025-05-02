@@ -55,45 +55,33 @@ npm run dev
 
 **Films (Movies)**
 
-Méthode	Endpoint	Description
-
-GET	/api/movies	_Récupérer tous les films_
-
-GET	/api/movies/:idMovie	_Récupérer un film spécifique_
-
-POST	/api/movies/:idMovie	_Créer un nouveau film_
-
-PUT	/api/movies/:idMovie	_Mettre à jour un film_
-
-DELETE	/api/movies/:idMovie	_Supprimer un film_
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+|GET|	/api/movies|	_Récupérer tous les films_
+|GET|	/api/movies/:idMovie|	_Récupérer un film spécifique_
+|POST|	/api/movies/:idMovie|	_Créer un nouveau film_
+|PUT|	/api/movies/:idMovie|	_Mettre à jour un film_
+|DELETE|	/api/movies/:idMovie|	_Supprimer un film_
 
 **Commentaires (Comments)**
 
-Méthode	Endpoint	Description
-
-GET	/api/movies/:idMovie/comments	_Récupérer tous les commentaires d'un film_
-
-GET	/api/movies/:idMovie/comments/:idComment	_Récupérer un commentaire spécifique_
-
-POST	/api/movies/:idMovie/comments/:idComment	_Ajouter un commentaire à un film_
-
-PUT	/api/movies/:idMovie/comments/:idComment	_Mettre à jour un commentaire_
-
-DELETE	/api/movies/:idMovie/comments/:idComment	_Supprimer un commentaire_
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+|GET	|/api/movies/:idMovie/comments|	_Récupérer tous les commentaires d'un film_|
+|GET	|/api/movies/:idMovie/comments/:idComment|	_Récupérer un commentaire spécifique_
+|POST	|/api/movies/:idMovie/comments/:idComment|	_Ajouter un commentaire à un film_
+|PUT	|/api/movies/:idMovie/comments/:idComment|	_Mettre à jour un commentaire_
+|DELETE	|/api/movies/:idMovie/comments/:idComment|	_Supprimer un commentaire_
 
 **Théâtres (Theaters)**
 
-Méthode	Endpoint	Description
-
-GET	/api/theaters	_Récupérer tous les théâtres_
-
-GET	/api/theaters/:idTheater	_Récupérer un théâtre spécifique_
-
-POST	/api/theaters/:idTheater	_Créer un nouveau théâtre_
-
-PUT	/api/theaters/:idTheater	_Mettre à jour un théâtre_
-
-DELETE	/api/theaters/:idTheater	_Supprimer un théâtre_
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+|GET	|/api/theaters|	_Récupérer tous les théâtres_
+|GET	|/api/theaters/:idTheater|	_Récupérer un théâtre spécifique_
+|POST	|/api/theaters/:idTheater|	_Créer un nouveau théâtre_
+|PUT	|/api/theaters/:idTheater|	_Mettre à jour un théâtre_
+|DELETE	|/api/theaters/:idTheater|	_Supprimer un théâtre_
 
 ## 📝 Exemples d'utilisation
 
