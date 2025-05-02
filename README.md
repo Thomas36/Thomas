@@ -1,4 +1,4 @@
-API REST MongoDB Atlas - Projet de Streaming/Critiques de Films
+API REST MongoDB Atlas
 📋 Présentation du projet
 Cette API REST permet d'accéder aux données d'une plateforme de streaming/critiques de films, en exposant des collections MongoDB Atlas via des endpoints standardisés. Elle offre un accès complet aux films, commentaires et théâtres de la base de données sample_mflix.
 
@@ -6,37 +6,45 @@ Cette API REST permet d'accéder aux données d'une plateforme de streaming/crit
 API en production : https://votre-api.vercel.app
 Documentation Swagger : https://votre-api.vercel.app/api-doc
 Dépôt GitHub : https://github.com/votre-username/votre-repo
+
 🛠️ Technologies utilisées
 Framework : Next.js (App Router + API Routes)
 Base de données : MongoDB Atlas (cluster cloud, base sample_mflix)
 Client MongoDB : mongodb (driver officiel Node.js)
 Hébergement : Vercel
 Documentation API : Swagger UI React
+
 🚀 Installation et démarrage
 Prérequis
 Node.js (v18 ou supérieur)
 Compte MongoDB Atlas avec la base sample_mflix importée
 Compte GitHub et Vercel (pour le déploiement)
+
 Installation locale
 Cloner le dépôt
 bash
 Copy Code
 git clone https://github.com/votre-username/votre-repo.git
 cd votre-repo
+
 Installer les dépendances
 bash
 Copy Code
 npm install
+
 Configurer les variables d'environnement
 Créer un fichier .env.local à la racine du projet
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority
+
 Lancer le serveur de développement
 bash
 Copy Code
 npm run dev
+
 Accéder à l'application
 API : http://localhost:3000/api/movies
 Documentation Swagger : http://localhost:3000/api-doc
+
 📚 Documentation des endpoints
 Films (Movies)
 Méthode	Endpoint	Description
@@ -45,6 +53,7 @@ GET	/api/movies/:idMovie	Récupérer un film spécifique
 POST	/api/movies/:idMovie	Créer un nouveau film
 PUT	/api/movies/:idMovie	Mettre à jour un film
 DELETE	/api/movies/:idMovie	Supprimer un film
+
 Commentaires (Comments)
 Méthode	Endpoint	Description
 GET	/api/movies/:idMovie/comments	Récupérer tous les commentaires d'un film
@@ -52,6 +61,7 @@ GET	/api/movies/:idMovie/comments/:idComment	Récupérer un commentaire spécifi
 POST	/api/movies/:idMovie/comments/:idComment	Ajouter un commentaire à un film
 PUT	/api/movies/:idMovie/comments/:idComment	Mettre à jour un commentaire
 DELETE	/api/movies/:idMovie/comments/:idComment	Supprimer un commentaire
+
 Théâtres (Theaters)
 Méthode	Endpoint	Description
 GET	/api/theaters	Récupérer tous les théâtres
@@ -59,6 +69,7 @@ GET	/api/theaters/:idTheater	Récupérer un théâtre spécifique
 POST	/api/theaters/:idTheater	Créer un nouveau théâtre
 PUT	/api/theaters/:idTheater	Mettre à jour un théâtre
 DELETE	/api/theaters/:idTheater	Supprimer un théâtre
+
 📝 Exemples d'utilisation
 Récupérer tous les films
 bash
@@ -80,6 +91,8 @@ Copy Code
     "..."
   ]
 }
+
+
 Récupérer un film spécifique
 bash
 Copy Code
@@ -99,6 +112,8 @@ Copy Code
     }
   }
 }
+
+
 Récupérer les commentaires d'un film
 bash
 Copy Code
@@ -121,35 +136,9 @@ Copy Code
     ]
   }
 }
-🔍 Optimisation de la base de données
-Indexation
-Des index ont été créés pour optimiser les performances des requêtes fréquentes :
 
-Index sur le champ title des films pour accélérer les recherches par titre
-Index sur le champ movie_id des commentaires pour accélérer la récupération des commentaires par film
-Index géospatial sur le champ location.geo des théâtres pour les recherches géographiques
-Monitoring
-Le monitoring des performances est assuré par MongoDB Atlas, permettant de :
 
-Surveiller les temps de réponse des requêtes
-Identifier les requêtes lentes
-Optimiser les index en fonction des patterns d'utilisation
-🔒 Sécurité
-Validation des IDs MongoDB pour prévenir les injections
-Gestion appropriée des erreurs avec codes HTTP standards
-Variables d'environnement pour les informations sensibles
-🧪 Tests
-Pour exécuter les tests :
-
-bash
-Copy Code
-npm test
-📈 Améliorations futures
-Authentification JWT pour sécuriser l'accès à l'API
-Pagination des résultats pour les collections volumineuses
-Implémentation de la recherche full-text avec MongoDB Atlas Search
-Mise en cache des requêtes fréquentes pour améliorer les performances
 👥 Contributeurs
-Votre Nom
-📄 Licence
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+Thomas BOUTET / Mathieu VERMENOUZE
+
+
