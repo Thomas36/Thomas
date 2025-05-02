@@ -38,14 +38,12 @@ Compte GitHub et Vercel (pour le déploiement)
 
 Installation locale
 Cloner le dépôt
-bash
-Copy Code
+
 git clone https://github.com/votre-username/votre-repo.git
 cd votre-repo
 
 Installer les dépendances
-bash
-Copy Code
+
 npm install
 
 Configurer les variables d'environnement
@@ -53,48 +51,67 @@ Créer un fichier .env.local à la racine du projet
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority
 
 Lancer le serveur de développement
-bash
-Copy Code
+
 npm run dev
 
 Accéder à l'application
+
 API : http://localhost:3000/api/movies
+
 Documentation Swagger : http://localhost:3000/api-doc
 
 📚 Documentation des endpoints
+
 Films (Movies)
+
 Méthode	Endpoint	Description
+
 GET	/api/movies	Récupérer tous les films
+
 GET	/api/movies/:idMovie	Récupérer un film spécifique
+
 POST	/api/movies/:idMovie	Créer un nouveau film
+
 PUT	/api/movies/:idMovie	Mettre à jour un film
+
 DELETE	/api/movies/:idMovie	Supprimer un film
 
 Commentaires (Comments)
+
 Méthode	Endpoint	Description
+
 GET	/api/movies/:idMovie/comments	Récupérer tous les commentaires d'un film
+
 GET	/api/movies/:idMovie/comments/:idComment	Récupérer un commentaire spécifique
+
 POST	/api/movies/:idMovie/comments/:idComment	Ajouter un commentaire à un film
+
 PUT	/api/movies/:idMovie/comments/:idComment	Mettre à jour un commentaire
+
 DELETE	/api/movies/:idMovie/comments/:idComment	Supprimer un commentaire
 
 Théâtres (Theaters)
+
 Méthode	Endpoint	Description
+
 GET	/api/theaters	Récupérer tous les théâtres
+
 GET	/api/theaters/:idTheater	Récupérer un théâtre spécifique
+
 POST	/api/theaters/:idTheater	Créer un nouveau théâtre
+
 PUT	/api/theaters/:idTheater	Mettre à jour un théâtre
+
 DELETE	/api/theaters/:idTheater	Supprimer un théâtre
 
 📝 Exemples d'utilisation
+
 Récupérer tous les films
-bash
-Copy Code
+
 curl -X GET https://votre-api.vercel.app/api/movies
 Réponse :
 
-json
-Copy Code
+
 {
   "status": 200,
   "data": [
@@ -110,13 +127,11 @@ Copy Code
 
 
 Récupérer un film spécifique
-bash
-Copy Code
+
 curl -X GET https://votre-api.vercel.app/api/movies/573a1390f29313caabcd42e8
 Réponse :
 
-json
-Copy Code
+
 {
   "status": 200,
   "data": {
@@ -131,13 +146,11 @@ Copy Code
 
 
 Récupérer les commentaires d'un film
-bash
-Copy Code
+
 curl -X GET https://votre-api.vercel.app/api/movies/573a1390f29313caabcd42e8/comments
 Réponse :
 
-json
-Copy Code
+
 {
   "status": 200,
   "data": {
