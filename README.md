@@ -1,23 +1,39 @@
 API REST MongoDB Atlas
+
 📋 Présentation du projet
+
 Cette API REST permet d'accéder aux données d'une plateforme de streaming/critiques de films, en exposant des collections MongoDB Atlas via des endpoints standardisés. Elle offre un accès complet aux films, commentaires et théâtres de la base de données sample_mflix.
 
 🔗 Liens importants
+
 API en production : https://votre-api.vercel.app
+
 Documentation Swagger : https://votre-api.vercel.app/api-doc
+
 Dépôt GitHub : https://github.com/votre-username/votre-repo
 
+
 🛠️ Technologies utilisées
+
 Framework : Next.js (App Router + API Routes)
+
 Base de données : MongoDB Atlas (cluster cloud, base sample_mflix)
+
 Client MongoDB : mongodb (driver officiel Node.js)
+
 Hébergement : Vercel
+
 Documentation API : Swagger UI React
 
+
 🚀 Installation et démarrage
+
 Prérequis
+
 Node.js (v18 ou supérieur)
+
 Compte MongoDB Atlas avec la base sample_mflix importée
+
 Compte GitHub et Vercel (pour le déploiement)
 
 Installation locale
